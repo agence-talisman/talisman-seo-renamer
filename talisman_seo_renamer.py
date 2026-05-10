@@ -19,12 +19,11 @@ from PIL import Image
 API_KEY_FILE = Path.home() / ".talisman_api_key"
 MODEL        = "claude-sonnet-4-5"
 
-PROMPT = """Tu es un expert SEO e-commerce spécialisé dans les accessoires de sport outdoor.
-Analyse cette image produit de la marque Wantalis (Weasy = ceinture running, Skiback = porte-skis).
-Génère UN SEUL slug SEO en français, optimisé pour le référencement naturel.
-Règles : tout en minuscules, mots séparés par des tirets, 3 à 6 mots, type de produit + attribut distinctif + "wantalis" si pertinent, pas de mots vides (le/la/de/des/pour).
+PROMPT = """Tu es un expert SEO e-commerce.
+Analyse cette image produit et génère UN SEUL slug SEO en français, optimisé pour le référencement naturel.
+Règles : tout en minuscules, mots séparés par des tirets, 3 à 6 mots, type de produit + attribut distinctif + nom de marque si pertinent, pas de mots vides (le/la/de/des/pour).
 Réponds UNIQUEMENT avec le slug, rien d'autre.
-Exemple : ceinture-running-femme-ajustable-wantalis"""
+Exemple : chaussure-running-trail-homme-légère"""
 
 
 # ── Dialogs natifs macOS ─────────────────────────────────────────────────────
